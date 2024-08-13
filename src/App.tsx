@@ -1,5 +1,14 @@
+import { Button } from "./components/Button";
+
 const App = () => {
-  return <></>;
+  return (
+  <>
+   <Button
+     text=""
+     onClick={() => {console.log()}}
+   />
+  </>
+ );
 };
 
 export default App;

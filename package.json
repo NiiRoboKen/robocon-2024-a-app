@@ -40,5 +40,9 @@
     "storybook": "^8.0.10",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
-  }
+  },
+  "description": "## Install ```sh pnpm i ```",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }

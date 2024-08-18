@@ -5,8 +5,9 @@
   padding: 6px 12px 6px 12px;
   border-radius: 5px;
 }
+
 .button:hover {
   background-color: #eee;
   color: #00e;
   border: solid 1px #00e;
-}/*# sourceMappingURL=Button.module.css.map */
+}

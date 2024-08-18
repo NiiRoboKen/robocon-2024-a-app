@@ -1,3 +1,5 @@
+import classes from "./Button.module.scss";
+
 type Props = {
   text: string;
   onClick: () => void;
@@ -6,7 +8,9 @@ type Props = {
 export const Button = (props: Props) => {
   return (
     <div>
-      <button onClick={props.onClick}>{props.text}</button>
+      <button onClick={props.onClick} className={classes.button}>
+        {props.text}
+      </button>
     </div>
   );
 };

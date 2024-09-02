@@ -11,11 +11,11 @@ export interface ContextType {
 
 export const ControllerContext = createContext<ContextType | null>(null);
 
-export const ControllerProvider = ({children}: Props) => {
+export const ControllerProvider = ({ children }: Props) => {
   const [controller, setController] = useState(new Controller());
   return (
-    <ControllerContext.Provider value={{controller, setController}} >
+    <ControllerContext.Provider value={{ controller, setController }}>
       {children}
     </ControllerContext.Provider>
   );
-}
+};

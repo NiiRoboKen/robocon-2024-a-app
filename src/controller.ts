@@ -1,4 +1,11 @@
-type Move = "stop" | "front" | "back" | "left" | "right" | "leftTurn" | "rightTurn";
+type Move =
+  | "stop"
+  | "front"
+  | "back"
+  | "left"
+  | "right"
+  | "leftTurn"
+  | "rightTurn";
 
 class Controller {
   constructor() {
@@ -33,7 +40,7 @@ class Controller {
   update_right_winding(a: boolean) {
     this.right_winding = a;
   }
-  
+
   joystick_x: number;
   joystick_y: number;
   move: Move;

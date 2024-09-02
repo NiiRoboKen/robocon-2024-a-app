@@ -1,7 +1,7 @@
 type Props = {
-    options: string[];
-    selectedOption: string;
-    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  options: string[];
+  selectedOption: string;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
 export const RadioButton = (props: Props) => {

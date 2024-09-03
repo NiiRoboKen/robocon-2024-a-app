@@ -1,15 +1,16 @@
+import { ReactNode } from "react";
 import classes from "./Button.module.css";
 
 type Props = {
-  text: string;
+  children?: ReactNode;
   onClick: () => void;
 };
 
-export const Button = (props: Props) => {
+export const Button = ({children, onClick}: Props) => {
   return (
     <div>
-      <button onClick={props.onClick} className={classes.button}>
-        {props.text}
+      <button onClick={onClick} className={classes.button}>
+        {children}
       </button>
     </div>
   );

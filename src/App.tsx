@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ControllerContext } from "./components/ControllerProvider/ControllerProvider";
+import { ControllerContext } from "./components/ControllerProvider";
 
 const App = () => {
   const context = useContext(ControllerContext);

@@ -6,7 +6,7 @@ type Props = {
   onClick: () => void;
 };
 
-export const Button = ({children, onClick}: Props) => {
+export const Button = ({ children, onClick }: Props) => {
   return (
     <div>
       <button onClick={onClick} className={classes.button}>

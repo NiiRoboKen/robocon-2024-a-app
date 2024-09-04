@@ -1,4 +1,4 @@
-type Move =
+export type Move =
   | "stop"
   | "front"
   | "back"
@@ -7,7 +7,7 @@ type Move =
   | "leftTurn"
   | "rightTurn";
 
-class Controller {
+export class Controller {
   constructor(
     joystick_x: number,
     joystick_y: number,

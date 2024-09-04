@@ -1,0 +1,25 @@
+.cross-layout {
+    display: grid;
+    grid-template-columns: 30px 30px 30px;
+    grid-template-rows: 30px 30px 30px;
+}
+
+.cross-layout .cross-layout-front {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+
+.cross-layout .cross-layout-left {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+
+.cross-layout .cross-layout-right {
+    grid-row: 2 / 3;
+    grid-column: 3/4;
+}
+
+.cross-layout .cross-layout-back {
+    grid-row: 3 / 4;
+    grid-column: 2/3;
+}

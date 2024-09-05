@@ -9,9 +9,11 @@ const App = () => {
   }
   // const { controller, setController } = context;
 
-  return <>
-  <CrossKey/>
-  </>;
+  return (
+    <>
+      <CrossKey />
+    </>
+  );
 };
 
 export default App;

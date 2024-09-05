@@ -1,1 +1,5 @@
-export { type ContextType, ControllerContext, ControllerProvider } from "./ControllerProvider"
+export {
+  type ContextType,
+  ControllerContext,
+  ControllerProvider,
+} from "./ControllerProvider";

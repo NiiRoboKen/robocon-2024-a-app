@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { ControllerContext } from "./components/ControllerProvider/ControllerProvider";
+import { CrossKey } from "./components/CrossKey/CrossKey";
 
 const App = () => {
   const context = useContext(ControllerContext);
@@ -8,7 +9,11 @@ const App = () => {
   }
   // const { controller, setController } = context;
 
-  return <></>;
+  return (
+    <>
+      <CrossKey />
+    </>
+  );
 };
 
 export default App;

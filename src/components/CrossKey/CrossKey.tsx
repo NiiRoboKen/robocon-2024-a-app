@@ -1,7 +1,7 @@
 import { Button } from "../Button";
 import { useContext } from "react";
 import { ControllerContext } from "../ControllerProvider/ControllerProvider";
-import classes from "./CrossKey.module.css";
+import CrossKeyModule from "./CrossKey.module.css";
 
 export const CrossKey = () => {
   const context = useContext(ControllerContext);
@@ -10,40 +10,51 @@ export const CrossKey = () => {
   }
   const { controller, setController } = context;
   return (
-    
-    <div className={classes.crosslayout}>
-      <div className={classes.front}>
+    <div className={CrossKeyModule["cross-layout"]}>
+      <div className={CrossKeyModule["position-front"]}>
         <Button
-          children="前"
           onClick={() => {
             setController(controller.update_move("front"));
           }}
-        />
+        >
+          <p className={CrossKeyModule["front-key"]}>▲</p>
+        </Button>
       </div>
-      <div className={classes.left}>
+      <div className={CrossKeyModule["position-center"]}>
+        <Button
+          onClick={() => {
+            setController(controller.update_move("stop"));
+          }}
+        >
+          <p className={CrossKeyModule["center-key"]}>●</p>
+        </Button>
+      </div>
+      <div className={CrossKeyModule["position-left"]}>
         <Button
           onClick={() => {
             setController(controller.update_move("left"));
           }}
         >
-            <p>前</p>
+          <p className={CrossKeyModule["left-key"]}>▲</p>
         </Button>
-        </div>
-        <div className={classes.right}>
+      </div>
+      <div className={CrossKeyModule["position-right"]}>
         <Button
-          children="右"
           onClick={() => {
             setController(controller.update_move("right"));
           }}
-        />
+        >
+          <p className={CrossKeyModule["right-key"]}>▲</p>
+        </Button>
       </div>
-      <div className={classes.back}>
+      <div className={CrossKeyModule["position-back"]}>
         <Button
-          children="後ろ"
           onClick={() => {
             setController(controller.update_move("back"));
           }}
-        />
+        >
+          <p className={CrossKeyModule["back-key"]}>▼</p>
+        </Button>
       </div>
     </div>
   );

@@ -1,10 +1,10 @@
 import { Button } from "../Button";
 
-export const LeftWindingButton = () => {
+export const RightWindingButton = () => {
   return (
     <div>
       <Button onClick={() => {}}>
-        <p>左巻取り</p>
+        <p>右巻取り</p>
       </Button>
     </div>
   );

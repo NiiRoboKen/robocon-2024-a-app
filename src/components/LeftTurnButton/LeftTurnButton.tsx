@@ -1,6 +1,6 @@
 import { Button } from "../Button";
 
-export const CounterclockwiseButton = () => {
+export const LeftTurnButton = () => {
   return (
     <div>
       <Button onClick={() => {}}>

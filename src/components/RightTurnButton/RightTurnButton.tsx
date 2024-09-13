@@ -4,7 +4,7 @@ export const CounterclockwiseButton = () => {
   return (
     <div>
       <Button onClick={() => {}}>
-        <p>左回り</p>
+        <p>右回り</p>
       </Button>
     </div>
   );

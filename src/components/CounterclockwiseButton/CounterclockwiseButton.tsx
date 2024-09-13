@@ -1,10 +1,10 @@
 import { Button } from "../Button";
 
-export const CollectButton = () => {
+export const CounterclockwiseButton = () => {
   return (
     <div>
       <Button onClick={() => {}}>
-        <p>回収</p>
+        <p>左回り</p>
       </Button>
     </div>
   );

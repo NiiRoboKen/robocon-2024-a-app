@@ -1,10 +1,10 @@
 import { Button } from "../Button";
 
-export const RightTurnButton = () => {
+export const LeftTurnButton = () => {
   return (
     <div>
       <Button onClick={() => {}}>
-        <p>右回り</p>
+        <p>左回り</p>
       </Button>
     </div>
   );

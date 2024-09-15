@@ -3,7 +3,7 @@ import classes from "./Button.module.css";
 
 type Props = {
   children?: ReactNode;
-  onClick: () => void;
+  onClick?: () => void;
 };
 
 export const Button = ({ children, onClick }: Props) => {

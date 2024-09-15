@@ -1,9 +1,9 @@
 import { Button } from "../Button";
 
-export const FiringButtonRight = () => {
+export const RightFiringButton = () => {
   return (
     <div>
-      <Button onClick={() => {}}>
+      <Button>
         <p>右発射</p>
       </Button>
     </div>

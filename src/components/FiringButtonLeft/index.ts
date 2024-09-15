@@ -1,1 +1,0 @@
-export { FiringButtonLeft } from "./FiringButtonLeft";

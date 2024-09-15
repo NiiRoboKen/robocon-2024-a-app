@@ -3,7 +3,7 @@ import { Button } from "../Button";
 export const LeftWindingButton = () => {
   return (
     <div>
-      <Button onClick={() => {}}>
+      <Button>
         <p>左巻取り</p>
       </Button>
     </div>

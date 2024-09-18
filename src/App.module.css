@@ -1,0 +1,71 @@
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  margin: 5%;
+}
+.button {
+  display: flex;
+  flex-flow: column;
+  align-content: center;
+  margin: 5%;
+  position: relative;
+}
+.crosskey {
+  position: relative;
+  margin: 20%;
+  left: -50%;
+}
+.joystick {
+  position: relative;
+  margin: 20%;
+  left: -30%;
+}
+.collect {
+  position: relative;
+  left: 100%;
+}
+.firing {
+  display: flex;
+  position: relative;
+  left: 100%;
+  margin-top: 30%;
+}
+.leftfiring {
+  position: relative;
+  left: -50%;
+}
+.rightfiring {
+  position: relative;
+}
+.winding {
+  display: flex;
+  position: relative;
+  left: 90%;
+  margin-top: 30%;
+}
+.leftwinding {
+  position: relative;
+  left: -50%;
+}
+.rightwinding {
+  position: relative;
+}
+.turn {
+  display: flex;
+  margin-top: 30%;
+  position: relative;
+  left: 100%;
+}
+.leftturn {
+  position: relative;
+  left: -50%;
+}
+.rightturn {
+  position: relative;
+}

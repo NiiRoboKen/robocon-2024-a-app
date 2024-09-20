@@ -30,12 +30,7 @@ const App = () => {
             <CrossKey />
           </div>
           <div className={classes.joystick}>
-            <JoyStick
-              disabled={false}
-              deadZone={0}
-              onNeutral={() => {}}
-              onMove={() => {}}
-            />
+            <JoyStick />
           </div>
         </div>
         <div className={classes.button}>

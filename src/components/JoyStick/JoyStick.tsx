@@ -1,19 +1,28 @@
+import { useContext } from "react";
 import { Joystick } from "react-joystick-component";
 import { IJoystickUpdateEvent } from "react-joystick-component/build/lib/Joystick";
+import { ControllerContext } from "../ControllerProvider";
 
-interface Props {
-  disabled: boolean;
-  deadZone: number;
-  onNeutral: (event: IJoystickUpdateEvent) => void;
-  onMove: (event: IJoystickUpdateEvent) => void;
-}
+export const JoyStick = () => {
+  const context = useContext(ControllerContext);
+  if (context === null) {
+    throw "???";
+  }
+  const { controller, setController } = context;
 
-export const JoyStick = ({ disabled, deadZone, onNeutral, onMove }: Props) => {
+  const onMove = (event: IJoystickUpdateEvent) => {
+    const x = event.x != null ? Math.floor(event.x * 127) : 0;
+    const y = event.y != null ? Math.floor(event.y * 127) : 0;
+    setController(controller.update_joystick(x, y));
+  };
+  const onNeutral = (_event: IJoystickUpdateEvent) => {
+    setController(controller.update_joystick(0, 0));
+  };
   return (
     <div>
       <Joystick
-        disabled={disabled}
-        minDistance={deadZone}
+        disabled={controller.move != "stop"}
+        minDistance={20}
         move={onMove}
         stop={onNeutral}
         baseColor="#DDDDDD"

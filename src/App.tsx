@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ControllerContext } from "./components/ControllerProvider";
 import { CrossKey } from "./components/CrossKey";
 import { JoyStick } from "./components/JoyStick";
@@ -16,7 +16,11 @@ const App = () => {
   if (context === null) {
     throw "???";
   }
-  // const { controller, setController } = context;
+  const { controller } = context;
+
+  useEffect(() => {
+    console.log(controller);
+  }, [controller]);
 
   return (
     <>

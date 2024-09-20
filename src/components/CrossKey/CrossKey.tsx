@@ -13,26 +13,28 @@ export const CrossKey = () => {
     <div className={style["cross-layout"]}>
       <div className={style["position-front"]}>
         <Button
-          onClick={() => {
+          onPress={() => {
             setController(controller.update_move("front"));
+          }}
+          onRelease={() => {
+            setController(controller.update_move("stop"));
           }}
         >
           <p className={style["front-key"]}>▲</p>
         </Button>
       </div>
       <div className={style["position-center"]}>
-        <Button
-          onClick={() => {
-            setController(controller.update_move("stop"));
-          }}
-        >
+        <Button onPress={() => {}} onRelease={() => {}}>
           <p className={style["center-key"]}>●</p>
         </Button>
       </div>
       <div className={style["position-left"]}>
         <Button
-          onClick={() => {
+          onPress={() => {
             setController(controller.update_move("left"));
+          }}
+          onRelease={() => {
+            setController(controller.update_move("stop"));
           }}
         >
           <p className={style["left-key"]}>▲</p>
@@ -40,8 +42,11 @@ export const CrossKey = () => {
       </div>
       <div className={style["position-right"]}>
         <Button
-          onClick={() => {
+          onPress={() => {
             setController(controller.update_move("right"));
+          }}
+          onRelease={() => {
+            setController(controller.update_move("stop"));
           }}
         >
           <p className={style["right-key"]}>▲</p>
@@ -49,8 +54,11 @@ export const CrossKey = () => {
       </div>
       <div className={style["position-back"]}>
         <Button
-          onClick={() => {
+          onPress={() => {
             setController(controller.update_move("back"));
+          }}
+          onRelease={() => {
+            setController(controller.update_move("stop"));
           }}
         >
           <p className={style["back-key"]}>▼</p>

@@ -11,11 +11,8 @@ export const RightFiringButton = () => {
   return (
     <div>
       <Button
-        onPress={() => {
-          setController(controller.update_right_firing(true));
-        }}
-        onRelease={() => {
-          setController(controller.update_right_firing(false));
+        onClick={() => {
+          setController(controller.push_right_firing());
         }}
       >
         <p>右発射</p>

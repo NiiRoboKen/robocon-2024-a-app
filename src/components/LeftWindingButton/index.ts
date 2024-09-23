@@ -1,1 +1,0 @@
-export { LeftWindingButton } from "./LeftWindingButton";

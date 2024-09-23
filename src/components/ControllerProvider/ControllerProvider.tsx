@@ -14,7 +14,7 @@ export const ControllerContext = createContext<ContextType | null>(null);
 
 export const ControllerProvider = ({ children }: Props) => {
   const [controller, setController] = useState(
-    new Controller(0, 0, "stop", false, false, false, false, false),
+    new Controller({ type: "stop", value: null }, false, false, false),
   );
   return (
     <ControllerContext.Provider value={{ controller, setController }}>

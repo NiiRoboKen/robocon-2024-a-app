@@ -2,6 +2,9 @@ import { useContext } from "react";
 import { Joystick } from "react-joystick-component";
 import { IJoystickUpdateEvent } from "react-joystick-component/build/lib/Joystick";
 import { ControllerContext } from "../ControllerProvider";
+import { stopEvent } from "../../controller";
+
+export const MAX = 127;
 
 export const JoyStick = () => {
   const context = useContext(ControllerContext);
@@ -11,17 +14,17 @@ export const JoyStick = () => {
   const { controller, setController } = context;
 
   const onMove = (event: IJoystickUpdateEvent) => {
-    const x = event.x != null ? Math.floor(event.x * 127) : 0;
-    const y = event.y != null ? Math.floor(event.y * 127) : 0;
-    setController(controller.update_joystick(x, y));
+    const x = event.x != null ? Math.floor(event.x * MAX) : 0;
+    const y = event.y != null ? Math.floor(event.y * MAX) : 0;
+    setController(controller.update_event({ type: "move", value: { x, y } }));
   };
   const onNeutral = (_event: IJoystickUpdateEvent) => {
-    setController(controller.update_joystick(0, 0));
+    setController(controller.update_event(stopEvent));
   };
   return (
     <div>
       <Joystick
-        disabled={controller.move != "stop"}
+        disabled={controller.event.type != "stop"}
         minDistance={20}
         move={onMove}
         stop={onNeutral}

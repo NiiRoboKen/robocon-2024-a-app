@@ -5,8 +5,6 @@ import { JoyStick } from "./components/JoyStick";
 import { CollectButton } from "./components/CollectButton";
 import { LeftFiringButton } from "./components/LeftFiringButton";
 import { RightFiringButton } from "./components/RightFiringButton";
-import { LeftWindingButton } from "./components/LeftWindingButton";
-import { RightWindingButton } from "./components/RightWindingButton";
 import { LeftTurnButton } from "./components/LeftTurnButton";
 import { RightTurnButton } from "./components/RightTurnButton";
 import classes from "./App.module.css";
@@ -16,11 +14,17 @@ const App = () => {
   if (context === null) {
     throw "???";
   }
-  const { controller } = context;
+  const { setController } = context;
 
   useEffect(() => {
-    console.log(controller);
-  }, [controller]);
+    const interval = setInterval(() => {
+      setController(prev => {
+        console.log(prev);
+        return prev.reset();
+      });
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
@@ -43,14 +47,6 @@ const App = () => {
             </div>
             <div className={classes.rightfiring}>
               <RightFiringButton />
-            </div>
-          </div>
-          <div className={classes.winding}>
-            <div className={classes.leftwinding}>
-              <LeftWindingButton />
-            </div>
-            <div className={classes.rightwinding}>
-              <RightWindingButton />
             </div>
           </div>
           <div className={classes.turn}>

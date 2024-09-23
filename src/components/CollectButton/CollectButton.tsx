@@ -11,11 +11,8 @@ export const CollectButton = () => {
   return (
     <div>
       <Button
-        onPress={() => {
-          setController(controller.update_collect(true));
-        }}
-        onRelease={() => {
-          setController(controller.update_collect(false));
+        onClick={() => {
+          setController(controller.push_collect());
         }}
       >
         <p>回収</p>

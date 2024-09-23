@@ -3,14 +3,16 @@ import classes from "./Button.module.css";
 
 type Props = {
   children?: ReactNode;
+  onClick?: () => void;
   onPress?: () => void;
   onRelease?: () => void;
 };
 
-export const Button = ({ children, onPress, onRelease }: Props) => {
+export const Button = ({ children, onClick, onPress, onRelease }: Props) => {
   return (
     <div>
       <button
+        onClick={onClick}
         onTouchStart={onPress}
         onTouchEnd={onRelease}
         onMouseDown={onPress}

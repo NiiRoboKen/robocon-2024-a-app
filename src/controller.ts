@@ -24,8 +24,8 @@ export type JoyStickXY = {
 };
 
 export type Turn =
-  | "leftTurn"
-  | "rightTurn";
+  | "left"
+  | "right";
 
 export class Controller {
   constructor(event: Event, collect: boolean, left_firing: boolean, right_firing: boolean) {
@@ -33,6 +33,14 @@ export class Controller {
     this.collect = collect;
     this.left_firing = left_firing;
     this.right_firing = right_firing;
+  }
+  reset() {
+    return new Controller(
+      { "type": "stop", "value": null },
+      false,
+      false,
+      false
+    );
   }
   update_event(event: Event) {
     return new Controller(

@@ -6,9 +6,10 @@ type Props = {
   onClick?: () => void;
   onPress?: () => void;
   onRelease?: () => void;
+  disabled: boolean;
 };
 
-export const Button = ({ children, onClick, onPress, onRelease }: Props) => {
+export const Button = ({ children, onClick, onPress, onRelease, disabled }: Props) => {
   return (
     <div>
       <button
@@ -18,6 +19,7 @@ export const Button = ({ children, onClick, onPress, onRelease }: Props) => {
         onMouseDown={onPress}
         onMouseUp={onRelease}
         className={classes.button}
+        disabled={disabled}
       >
         {children}
       </button>

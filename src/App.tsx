@@ -16,10 +16,30 @@ const App = () => {
   }
   const { setController } = context;
 
+  const URL = "http://127.0.0.1:3000";
+
   useEffect(() => {
     const interval = setInterval(() => {
       setController((prev) => {
         console.log(prev);
+        const body = JSON.stringify(prev);
+        console.log(body);
+        const res = fetch(URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: body,
+        });
+
+        res
+          .then((res) => {
+            console.log(res.json());
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+
         return prev.reset();
       });
     }, 1000);

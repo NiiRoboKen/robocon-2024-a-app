@@ -35,13 +35,13 @@ const App = () => {
 
         res
           .then((res) => {
-            console.log(res.json());
+            console.debug(res.json());
           })
           .catch((err) => {
-            console.log(err);
+            console.error(err);
           });
 
-        return prev.reset();
+        return prev.reset_buttons();
       });
     }, INTERVAL_TIME);
     return () => clearInterval(interval);

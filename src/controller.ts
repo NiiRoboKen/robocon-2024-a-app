@@ -39,8 +39,8 @@ export class Controller {
     this.left_firing = left_firing;
     this.right_firing = right_firing;
   }
-  reset() {
-    return new Controller({ type: "stop", value: null }, false, false, false);
+  reset_buttons() {
+    return new Controller(this.event, false, false, false);
   }
   update_event(event: Event) {
     return new Controller(

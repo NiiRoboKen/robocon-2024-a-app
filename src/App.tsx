@@ -33,13 +33,13 @@ const App = () => {
 
         res
           .then((res) => {
-            console.log(res.json());
+            console.debug(res.json());
           })
           .catch((err) => {
-            console.log(err);
+            console.error(err);
           });
 
-        return prev.reset();
+        return prev.reset_buttons();
       });
     }, 1000);
     return () => clearInterval(interval);

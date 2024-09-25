@@ -18,7 +18,7 @@ export const JoyStick = () => {
     const y = event.y != null ? Math.floor(event.y * MAX) : 0;
     setController(controller.update_event({ type: "move", value: { x, y } }));
   };
-  const onNeutral = (_event: IJoystickUpdateEvent) => {
+  const onNeutral = () => {
     setController(controller.update_event(stopEvent));
   };
   return (

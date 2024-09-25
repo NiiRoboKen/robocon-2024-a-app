@@ -45,6 +45,7 @@ const App = () => {
       });
     }, INTERVAL_TIME);
     return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

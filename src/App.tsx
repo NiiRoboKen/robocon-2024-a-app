@@ -18,7 +18,7 @@ const App = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setController(prev => {
+      setController((prev) => {
         console.log(prev);
         return prev.reset();
       });

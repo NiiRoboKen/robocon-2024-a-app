@@ -14,6 +14,7 @@ export const CollectButton = () => {
         onClick={() => {
           setController(controller.push_collect());
         }}
+        disabled={false}
       >
         <p>回収</p>
       </Button>

@@ -6,10 +6,16 @@ type Props = {
   onClick?: () => void;
   onPress?: () => void;
   onRelease?: () => void;
-  disabled: boolean;
+  disabled?: boolean;
 };
 
-export const Button = ({ children, onClick, onPress, onRelease, disabled }: Props) => {
+export const Button = ({
+  children,
+  onClick,
+  onPress,
+  onRelease,
+  disabled,
+}: Props) => {
   return (
     <div>
       <button

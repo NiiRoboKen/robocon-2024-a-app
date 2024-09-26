@@ -1,5 +1,4 @@
-import { useContext, useEffect } from "react";
-import { ControllerContext } from "./components/ControllerProvider";
+import { useEffect } from "react";
 import { CrossKey } from "./components/CrossKey";
 import { JoyStick } from "./components/JoyStick";
 import { CollectButton } from "./components/CollectButton";
@@ -8,16 +7,13 @@ import { RightFiringButton } from "./components/RightFiringButton";
 import { LeftTurnButton } from "./components/LeftTurnButton";
 import { RightTurnButton } from "./components/RightTurnButton";
 import style from "./App.module.css";
+import { useController } from "./components/ControllerProvider/ControllerProvider";
 
 const URL = "http://127.0.0.1:3000";
 const INTERVAL_TIME = 1000;
 
 const App = () => {
-  const context = useContext(ControllerContext);
-  if (context === null) {
-    throw "???";
-  }
-  const { setController } = context;
+  const { setController } = useController();
 
   useEffect(() => {
     const interval = setInterval(() => {

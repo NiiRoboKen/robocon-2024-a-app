@@ -28,7 +28,7 @@ export const CrossKey = () => {
         </Button>
       </div>
       <div className={style["position-center"]}>
-        <Button onPress={() => {}} onRelease={() => {}}>
+        <Button>
           <p className={style["center-key"]}>●</p>
         </Button>
       </div>

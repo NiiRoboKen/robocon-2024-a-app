@@ -1,14 +1,9 @@
 import { Button } from "../Button";
 import { useController } from "../ControllerProvider";
-import { StopEvent, TurnEvent } from "../../controller";
+import { TurnEvent, stopEvent } from "../../controller";
 
 export const LeftTurnButton = () => {
   const { controller, setController } = useController();
-
-  const stopEvent: StopEvent = {
-    type: "stop",
-    value: null,
-  };
   const turnEvent: TurnEvent = {
     type: "turn",
     value: "left",

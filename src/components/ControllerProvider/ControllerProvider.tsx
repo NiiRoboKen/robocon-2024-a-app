@@ -1,4 +1,4 @@
-import { ReactNode, SetStateAction, createContext, useState } from "react";
+import { ReactNode, SetStateAction, createContext, useContext, useState } from "react";
 import { Controller } from "../../controller";
 
 export interface Props {
@@ -21,4 +21,14 @@ export const ControllerProvider = ({ children }: Props) => {
       {children}
     </ControllerContext.Provider>
   );
+};
+
+export const useController = () => {
+  const context = useContext(ControllerContext);
+
+  if (context == null) {
+    throw new Error("ControllerContext must be used within a ControllerProvider.");
+  }
+
+  return context;
 };

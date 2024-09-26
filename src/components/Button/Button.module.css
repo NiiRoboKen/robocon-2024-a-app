@@ -11,3 +11,9 @@
   color: #00e;
   border: solid 1px #00e;
 }
+
+.button:disabled {
+  background-color: #fff;
+  color: #2c7cff;
+  border: solid 1px #2c7cff;
+}

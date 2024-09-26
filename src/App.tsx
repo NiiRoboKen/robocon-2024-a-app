@@ -22,6 +22,7 @@ const App = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setController((prev) => {
+        console.log(prev);
         const body = JSON.stringify(prev);
 
         console.log(body);

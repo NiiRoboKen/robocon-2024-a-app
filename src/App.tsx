@@ -21,7 +21,7 @@ const postObject = (url: string, body: object): Promise<Response> => {
     },
     body: json,
   });
-}
+};
 
 const App = () => {
   const { setController } = useController();

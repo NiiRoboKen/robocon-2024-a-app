@@ -15,7 +15,7 @@ export const LeftFiringButton = () => {
           setController(controller.push_left_firing());
         }}
       >
-        <p>左発射</p>
+        左発射
       </Button>
     </div>
   );

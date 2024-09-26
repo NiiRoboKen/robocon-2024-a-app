@@ -28,7 +28,7 @@ export const LeftTurnButton = () => {
           setController(controller.update_event(stopEvent));
         }}
       >
-        <p>左回り</p>
+       左回り
       </Button>
     </div>
   );

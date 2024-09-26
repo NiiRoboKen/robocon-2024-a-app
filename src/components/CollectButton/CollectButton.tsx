@@ -15,7 +15,7 @@ export const CollectButton = () => {
           setController(controller.push_collect());
         }}
       >
-        <p>回収</p>
+        回収
       </Button>
     </div>
   );

@@ -10,7 +10,7 @@ type Props = {
 
 export const Button = ({ children, onClick, onPress, onRelease }: Props) => {
   return (
-    <div>
+   
       <button
         onClick={onClick}
         onTouchStart={onPress}
@@ -21,6 +21,6 @@ export const Button = ({ children, onClick, onPress, onRelease }: Props) => {
       >
         {children}
       </button>
-    </div>
+  
   );
 };

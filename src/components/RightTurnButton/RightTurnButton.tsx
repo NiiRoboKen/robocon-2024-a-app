@@ -28,7 +28,7 @@ export const RightTurnButton = () => {
           setController(controller.update_event(stopEvent));
         }}
       >
-        <p>右回り</p>
+       右回り
       </Button>
     </div>
   );

@@ -1,10 +1,8 @@
 import { Button } from "../Button";
 import { useController } from "../ControllerProvider/ControllerProvider";
 import style from "./CrossKey.module.css";
-import { MAX } from "../JoyStick/JoyStick";
 import { stopEvent } from "../../controller";
-
-const POWER = 0.5;
+import { MAX_POWER, POWER_RATIO } from "../../App";
 
 export const CrossKey = () => {
   const { controller, setController } = useController();
@@ -16,7 +14,7 @@ export const CrossKey = () => {
             setController(
               controller.update_event({
                 type: "move",
-                value: { x: 0, y: POWER * MAX },
+                value: { x: 0, y: POWER_RATIO * MAX_POWER },
               }),
             );
           }}
@@ -38,7 +36,7 @@ export const CrossKey = () => {
             setController(
               controller.update_event({
                 type: "move",
-                value: { x: -1 * POWER * MAX, y: 0 },
+                value: { x: -1 * POWER_RATIO * MAX_POWER, y: 0 },
               }),
             );
           }}
@@ -55,7 +53,7 @@ export const CrossKey = () => {
             setController(
               controller.update_event({
                 type: "move",
-                value: { x: POWER * MAX, y: 0 },
+                value: { x: POWER_RATIO * MAX_POWER, y: 0 },
               }),
             );
           }}
@@ -72,7 +70,7 @@ export const CrossKey = () => {
             setController(
               controller.update_event({
                 type: "move",
-                value: { x: 0, y: -1 * POWER * MAX },
+                value: { x: 0, y: -1 * POWER_RATIO * MAX_POWER },
               }),
             );
           }}

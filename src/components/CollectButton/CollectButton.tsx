@@ -1,20 +1,14 @@
-import { useContext } from "react";
 import { Button } from "../Button";
-import { ControllerContext } from "../ControllerProvider";
+import { useController } from "../ControllerProvider";
 
 export const CollectButton = () => {
-  const context = useContext(ControllerContext);
-  if (context === null) {
-    throw "???";
-  }
-  const { controller, setController } = context;
+  const { controller, setController } = useController();
   return (
     <div>
       <Button
         onClick={() => {
           setController(controller.push_collect());
         }}
-        disabled={false}
       >
         <p>回収</p>
       </Button>

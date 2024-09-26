@@ -1,6 +1,5 @@
 import { Button } from "../Button";
-import { useContext } from "react";
-import { ControllerContext } from "../ControllerProvider/ControllerProvider";
+import { useController } from "../ControllerProvider/ControllerProvider";
 import style from "./CrossKey.module.css";
 import { MAX } from "../JoyStick/JoyStick";
 import { stopEvent } from "../../controller";
@@ -8,11 +7,7 @@ import { stopEvent } from "../../controller";
 const POWER = 0.5;
 
 export const CrossKey = () => {
-  const context = useContext(ControllerContext);
-  if (context === null) {
-    throw "???";
-  }
-  const { controller, setController } = context;
+  const { controller, setController } = useController();
   return (
     <div className={style["cross-layout"]}>
       <div className={style["position-front"]}>

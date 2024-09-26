@@ -1,13 +1,8 @@
-import { useContext } from "react";
 import { Button } from "../Button";
-import { ControllerContext } from "../ControllerProvider";
+import { useController } from "../ControllerProvider";
 
 export const LeftFiringButton = () => {
-  const context = useContext(ControllerContext);
-  if (context === null) {
-    throw "???";
-  }
-  const { controller, setController } = context;
+  const { controller, setController } = useController();
   return (
     <div>
       <Button

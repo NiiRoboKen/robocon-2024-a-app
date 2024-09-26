@@ -1,5 +1,5 @@
 export {
   type ContextType,
   ControllerProvider,
-  useController
+  useController,
 } from "./ControllerProvider";

@@ -19,8 +19,7 @@ const App = () => {
     const interval = setInterval(() => {
       setController((prev) => {
         const body = JSON.stringify(prev);
-
-        console.log(body);
+        console.debug(body);
         const res = fetch(URL, {
           method: "POST",
           headers: {

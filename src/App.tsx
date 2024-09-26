@@ -12,29 +12,28 @@ import { useController } from "./components/ControllerProvider/ControllerProvide
 const URL = "http://127.0.0.1:3000";
 const INTERVAL_TIME = 1000;
 
+const postObject = (url: string, body: object): Promise<Response> => {
+  const json = JSON.stringify(body);
+  return fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: json,
+  });
+}
+
 const App = () => {
   const { setController } = useController();
 
   useEffect(() => {
     const interval = setInterval(() => {
       setController((prev) => {
-        const body = JSON.stringify(prev);
-        console.debug(body);
-        const res = fetch(URL, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: body,
-        });
+        console.debug(prev);
 
-        res
-          .then((res) => {
-            console.debug(res.json());
-          })
-          .catch((err) => {
-            console.error(err);
-          });
+        postObject(URL, prev).then((res) => {
+          console.debug(res.json());
+        });
 
         return prev.reset_buttons();
       });

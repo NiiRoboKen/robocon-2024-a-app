@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Button } from "../Button";
 import { ControllerContext } from "../ControllerProvider";
 import { StopEvent, TurnEvent } from "../../controller";
+import classes from "../MotionButton.module.css";
 
 export const RightTurnButton = () => {
   const context = useContext(ControllerContext);
@@ -28,7 +29,7 @@ export const RightTurnButton = () => {
           setController(controller.update_event(stopEvent));
         }}
       >
-       右回り
+        <p className={classes.motion}>右回り</p>
       </Button>
     </div>
   );

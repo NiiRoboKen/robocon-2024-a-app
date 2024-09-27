@@ -18,7 +18,7 @@ const App = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setController(prev => {
+      setController((prev) => {
         console.log(prev);
         return prev.reset();
       });
@@ -29,11 +29,11 @@ const App = () => {
   return (
     <>
       <div className={classes.app}>
-        <div className={classes.left}>
-          <div className={classes.crosskey}>
-            <CrossKey />
-          </div>
-          <div className={classes.joystick}>
+        <div className={classes.crosskey}>
+          <CrossKey />
+        </div>
+        <div className={classes.joystick}>
+          <div className={classes.stylej}>
             <JoyStick />
           </div>
         </div>

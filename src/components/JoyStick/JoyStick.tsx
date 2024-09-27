@@ -22,15 +22,13 @@ export const JoyStick = () => {
     setController(controller.update_event(stopEvent));
   };
   return (
-    <div>
-      <Joystick
-        disabled={controller.event.type != "stop"}
-        minDistance={20}
-        move={onMove}
-        stop={onNeutral}
-        baseColor="#DDDDDD"
-        stickColor="#AAAAAA"
-      ></Joystick>
-    </div>
+    <Joystick
+      disabled={controller.event.type != "stop"}
+      minDistance={20}
+      move={onMove}
+      stop={onNeutral}
+      baseColor="#DDDDDD"
+      stickColor="#AAAAAA"
+    ></Joystick>
   );
 };

@@ -10,17 +10,15 @@ type Props = {
 
 export const Button = ({ children, onClick, onPress, onRelease }: Props) => {
   return (
-   
-      <button
-        onClick={onClick}
-        onTouchStart={onPress}
-        onTouchEnd={onRelease}
-        onMouseDown={onPress}
-        onMouseUp={onRelease}
-        className={classes.button}
-      >
-        {children}
-      </button>
-  
+    <button
+      onClick={onClick}
+      onTouchStart={onPress}
+      onTouchEnd={onRelease}
+      onMouseDown={onPress}
+      onMouseUp={onRelease}
+      className={classes.button}
+    >
+      {children}
+    </button>
   );
 };

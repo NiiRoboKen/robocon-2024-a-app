@@ -10,3 +10,9 @@
   color: rgb(60, 60, 60);
   border: solid 1px rgb(60, 60, 60);
 }
+
+.button:disabled {
+  background-color: #fff;
+  color: #2c7cff;
+  border: solid 1px #2c7cff;
+}

@@ -9,6 +9,9 @@ import { LeftTurnButton } from "./components/LeftTurnButton";
 import { RightTurnButton } from "./components/RightTurnButton";
 import classes from "./App.module.css";
 
+const URL = "http://127.0.0.1:3000";
+const INTERVAL_TIME = 1000;
+
 const App = () => {
   const context = useContext(ControllerContext);
   if (context === null) {
@@ -20,10 +23,30 @@ const App = () => {
     const interval = setInterval(() => {
       setController((prev) => {
         console.log(prev);
-        return prev.reset();
+        const body = JSON.stringify(prev);
+
+        console.log(body);
+        const res = fetch(URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: body,
+        });
+
+        res
+          .then((res) => {
+            console.debug(res.json());
+          })
+          .catch((err) => {
+            console.error(err);
+          });
+
+        return prev.reset_buttons();
       });
-    }, 1000);
+    }, INTERVAL_TIME);
     return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

@@ -6,19 +6,29 @@ type Props = {
   onClick?: () => void;
   onPress?: () => void;
   onRelease?: () => void;
+  disabled?: boolean;
 };
 
-export const Button = ({ children, onClick, onPress, onRelease }: Props) => {
+export const Button = ({
+  children,
+  onClick,
+  onPress,
+  onRelease,
+  disabled,
+}: Props) => {
   return (
-    <button
-      onClick={onClick}
-      onTouchStart={onPress}
-      onTouchEnd={onRelease}
-      onMouseDown={onPress}
-      onMouseUp={onRelease}
-      className={classes.button}
-    >
-      {children}
-    </button>
+    <div>
+      <button
+        onClick={onClick}
+        onTouchStart={onPress}
+        onTouchEnd={onRelease}
+        onMouseDown={onPress}
+        onMouseUp={onRelease}
+        disabled={disabled}
+        className={classes.button}
+      >
+        {children}
+      </button>
+  </div>
   );
 };

@@ -4,7 +4,11 @@ import { useController } from "../../hooks/useController";
 import { stopEvent } from "../../controller";
 import { MAX_POWER } from "../../env";
 
-export const JoyStick = () => {
+export interface Props {
+  size?: number;
+}
+
+export const JoyStick = ({ size }: Props) => {
   const { controller, setController } = useController();
 
   const onMove = (event: IJoystickUpdateEvent) => {
@@ -17,6 +21,7 @@ export const JoyStick = () => {
   };
   return (
     <Joystick
+      size={size}
       disabled={controller.event.type != "stop"}
       minDistance={20}
       move={onMove}

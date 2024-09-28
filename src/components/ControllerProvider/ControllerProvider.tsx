@@ -1,16 +1,10 @@
-import { ReactNode, SetStateAction, createContext, useState } from "react";
+import { ReactNode, useState } from "react";
 import { Controller } from "../../controller";
+import { ControllerContext } from "../../hooks/useController";
 
 export interface Props {
   children?: ReactNode;
 }
-
-export interface ContextType {
-  controller: Controller;
-  setController: React.Dispatch<SetStateAction<Controller>>;
-}
-
-export const ControllerContext = createContext<ContextType | null>(null);
 
 export const ControllerProvider = ({ children }: Props) => {
   const [controller, setController] = useState(

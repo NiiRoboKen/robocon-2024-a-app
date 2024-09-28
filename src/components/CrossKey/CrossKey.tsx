@@ -1,18 +1,11 @@
 import { Button } from "../Button";
-import { useContext } from "react";
-import { ControllerContext } from "../ControllerProvider/ControllerProvider";
+import { useController } from "../../hooks/useController";
 import style from "./CrossKey.module.css";
-import { MAX } from "../JoyStick/JoyStick";
 import { stopEvent } from "../../controller";
-
-const POWER = 0.5;
+import { MAX_POWER, POWER_RATIO } from "../../env";
 
 export const CrossKey = () => {
-  const context = useContext(ControllerContext);
-  if (context === null) {
-    throw "???";
-  }
-  const { controller, setController } = context;
+  const { controller, setController } = useController();
   return (
     <div className={style["cross-layout"]}>
       <div className={style["position-front"]}>
@@ -21,7 +14,7 @@ export const CrossKey = () => {
             setController(
               controller.update_event({
                 type: "move",
-                value: { x: 0, y: POWER * MAX },
+                value: { x: 0, y: POWER_RATIO * MAX_POWER },
               }),
             );
           }}
@@ -33,7 +26,7 @@ export const CrossKey = () => {
         </Button>
       </div>
       <div className={style["position-center"]}>
-        <Button onPress={() => {}} onRelease={() => {}}>
+        <Button>
           <p className={style["center-key"]}>●</p>
         </Button>
       </div>
@@ -43,7 +36,7 @@ export const CrossKey = () => {
             setController(
               controller.update_event({
                 type: "move",
-                value: { x: -1 * POWER * MAX, y: 0 },
+                value: { x: -1 * POWER_RATIO * MAX_POWER, y: 0 },
               }),
             );
           }}
@@ -60,7 +53,7 @@ export const CrossKey = () => {
             setController(
               controller.update_event({
                 type: "move",
-                value: { x: POWER * MAX, y: 0 },
+                value: { x: POWER_RATIO * MAX_POWER, y: 0 },
               }),
             );
           }}
@@ -77,7 +70,7 @@ export const CrossKey = () => {
             setController(
               controller.update_event({
                 type: "move",
-                value: { x: 0, y: -1 * POWER * MAX },
+                value: { x: 0, y: -1 * POWER_RATIO * MAX_POWER },
               }),
             );
           }}

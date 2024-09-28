@@ -1,21 +1,15 @@
-import { useContext } from "react";
 import { Joystick } from "react-joystick-component";
 import { IJoystickUpdateEvent } from "react-joystick-component/build/lib/Joystick";
-import { ControllerContext } from "../ControllerProvider";
+import { useController } from "../../hooks/useController";
 import { stopEvent } from "../../controller";
-
-export const MAX = 127;
+import { MAX_POWER } from "../../env";
 
 export const JoyStick = () => {
-  const context = useContext(ControllerContext);
-  if (context === null) {
-    throw "???";
-  }
-  const { controller, setController } = context;
+  const { controller, setController } = useController();
 
   const onMove = (event: IJoystickUpdateEvent) => {
-    const x = event.x != null ? Math.floor(event.x * MAX) : 0;
-    const y = event.y != null ? Math.floor(event.y * MAX) : 0;
+    const x = event.x != null ? Math.floor(event.x * MAX_POWER) : 0;
+    const y = event.y != null ? Math.floor(event.y * MAX_POWER) : 0;
     setController(controller.update_event({ type: "move", value: { x, y } }));
   };
   const onNeutral = () => {

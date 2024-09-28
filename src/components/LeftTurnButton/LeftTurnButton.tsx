@@ -1,20 +1,10 @@
-import { useContext } from "react";
 import { Button } from "../Button";
-import { ControllerContext } from "../ControllerProvider";
-import { StopEvent, TurnEvent } from "../../controller";
-import classes from "../MotionButton.module.css";
+import { useController } from "../../hooks/useController";
+import { TurnEvent, stopEvent } from "../../controller";
+import styles from "../MotionButton.module.css";
 
 export const LeftTurnButton = () => {
-  const context = useContext(ControllerContext);
-  if (context === null) {
-    throw "???";
-  }
-  const { controller, setController } = context;
-
-  const stopEvent: StopEvent = {
-    type: "stop",
-    value: null,
-  };
+  const { controller, setController } = useController();
   const turnEvent: TurnEvent = {
     type: "turn",
     value: "left",
@@ -28,7 +18,7 @@ export const LeftTurnButton = () => {
         setController(controller.update_event(stopEvent));
       }}
     >
-      <p className={classes.motion}>左回り</p>
+      <p className={styles.motion}>左回り</p>
     </Button>
   );
 };

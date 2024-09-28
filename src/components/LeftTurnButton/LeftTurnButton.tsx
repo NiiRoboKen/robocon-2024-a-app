@@ -1,7 +1,6 @@
 import { Button } from "../Button";
 import { useController } from "../../hooks/useController";
 import { TurnEvent, stopEvent } from "../../controller";
-import styles from "../MotionButton.module.css";
 
 export const LeftTurnButton = () => {
   const { controller, setController } = useController();
@@ -11,6 +10,7 @@ export const LeftTurnButton = () => {
   };
   return (
     <Button
+      theme="redbull"
       onPress={() => {
         setController(controller.update_event(turnEvent));
       }}
@@ -18,7 +18,7 @@ export const LeftTurnButton = () => {
         setController(controller.update_event(stopEvent));
       }}
     >
-      <p className={styles.motion}>左回り</p>
+      <p>左回り</p>
     </Button>
   );
 };

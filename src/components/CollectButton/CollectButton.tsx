@@ -1,18 +1,16 @@
 import { Button } from "../Button";
 import { useController } from "../../hooks/useController";
-import styles from "../MotionButton.module.css";
 
 export const CollectButton = () => {
   const { controller, setController } = useController();
   return (
-    <div>
       <Button
+        theme="chillout"
         onClick={() => {
           setController(controller.push_collect());
         }}
       >
-        <p className={styles.motion}>回収</p>
+        <p>回収</p>
       </Button>
-    </div>
   );
 };

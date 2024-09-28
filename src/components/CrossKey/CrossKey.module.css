@@ -1,7 +1,8 @@
 .cross-layout {
     display: grid;
-    grid-template-columns: 60px 60px 60px;
-    grid-template-rows: 60px 60px 60px;
+   place-content: center;
+    grid-template-columns: 90px 90px 90px;
+    grid-template-rows: 90px 90px 90px;
 }
 
 
@@ -32,33 +33,58 @@
 
 
 .front-key{
+    display: grid;
+    place-content: center;
     size: 15px;
-    width: 34px;
-    line-height: 1.5;
+    width: 25px;
+    height: 25px;
+    padding: 17.5px;
+    margin: 0;
+    font-size: 30px;
 }
 
 .center-key{
+    display: grid;
+    place-content: center;
     size: 15px;
-    width: 34px;
-    line-height: 1.5;
+    width: 25px;
+    height: 25px;
+    padding: 17.5px;
+    margin: 0;
+    font-size: 30px;
 }
 
 .left-key{
+    display: grid;
+    place-content: center;
     size: 15px;
-    width: 34px;
-    line-height: 1.5;
+    width: 25px;
+    height: 25px;
+    padding: 17.5px;
+    margin: 0;
+    font-size: 30px;
     transform: rotate(-90deg);
 }
 
 .right-key{
+    display: grid;
+    place-content: center;
     size: 15px;
-    width: 34px;
-    line-height: 1.5;
+    width: 25px;
+    height: 25px;
+    padding: 17.5px;
+    margin: 0;
+    font-size: 30px;
     transform: rotate(90deg);
 }
 
 .back-key{
+    display: grid;
+    place-content: center;
     size: 15px;
-    width: 34px;
-    line-height: 1.5;
+    width: 25px;
+    height: 25px;
+    padding: 17.5px;
+    margin: 0;
+    font-size: 30px;
 }

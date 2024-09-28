@@ -7,7 +7,7 @@ import { LeftFiringButton } from "./components/LeftFiringButton";
 import { RightFiringButton } from "./components/RightFiringButton";
 import { LeftTurnButton } from "./components/LeftTurnButton";
 import { RightTurnButton } from "./components/RightTurnButton";
-import style from "./App.module.css";
+import classes from "./App.module.css";
 
 const URL = "http://127.0.0.1:3000";
 const INTERVAL_TIME = 1000;
@@ -51,32 +51,32 @@ const App = () => {
 
   return (
     <>
-      <div className={style.app}>
-        <div className={style.left}>
-          <div className={style.crosskey}>
-            <CrossKey />
-          </div>
-          <div className={style.joystick}>
+      <div className={classes.app}>
+        <div className={classes.crosskey}>
+          <CrossKey />
+        </div>
+        <div className={classes.joystick}>
+          <div className={classes.stylej}>
             <JoyStick />
           </div>
         </div>
-        <div className={style.button}>
-          <div className={style.collect}>
+        <div className={classes.button}>
+          <div className={classes.collect}>
             <CollectButton />
           </div>
-          <div className={style.firing}>
-            <div className={style.leftfiring}>
+          <div className={classes.firing}>
+            <div className={classes.leftfiring}>
               <LeftFiringButton />
             </div>
-            <div className={style.rightfiring}>
+            <div className={classes.rightfiring}>
               <RightFiringButton />
             </div>
           </div>
-          <div className={style.turn}>
-            <div className={style.leftturn}>
+          <div className={classes.turn}>
+            <div className={classes.leftturn}>
               <LeftTurnButton />
             </div>
-            <div className={style.rightturn}>
+            <div className={classes.rightturn}>
               <RightTurnButton />
             </div>
           </div>

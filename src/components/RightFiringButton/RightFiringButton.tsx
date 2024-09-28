@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Button } from "../Button";
 import { ControllerContext } from "../ControllerProvider";
+import classes from "../MotionButton.module.css";
 
 export const RightFiringButton = () => {
   const context = useContext(ControllerContext);
@@ -15,7 +16,7 @@ export const RightFiringButton = () => {
           setController(controller.push_right_firing());
         }}
       >
-        <p>右発射</p>
+        <p className={classes.motion}>右発射</p>
       </Button>
     </div>
   );

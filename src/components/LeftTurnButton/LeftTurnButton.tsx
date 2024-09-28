@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Button } from "../Button";
 import { ControllerContext } from "../ControllerProvider";
 import { StopEvent, TurnEvent } from "../../controller";
+import classes from "../MotionButton.module.css";
 
 export const LeftTurnButton = () => {
   const context = useContext(ControllerContext);
@@ -19,17 +20,15 @@ export const LeftTurnButton = () => {
     value: "left",
   };
   return (
-    <div>
-      <Button
-        onPress={() => {
-          setController(controller.update_event(turnEvent));
-        }}
-        onRelease={() => {
-          setController(controller.update_event(stopEvent));
-        }}
-      >
-        <p>左回り</p>
-      </Button>
-    </div>
+    <Button
+      onPress={() => {
+        setController(controller.update_event(turnEvent));
+      }}
+      onRelease={() => {
+        setController(controller.update_event(stopEvent));
+      }}
+    >
+      <p className={classes.motion}>左回り</p>
+    </Button>
   );
 };

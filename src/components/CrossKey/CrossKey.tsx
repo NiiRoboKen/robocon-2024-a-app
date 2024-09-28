@@ -1,8 +1,8 @@
 import { Button } from "../Button";
-import { useController } from "../ControllerProvider/ControllerProvider";
+import { useController } from "../../hooks/useController";
 import style from "./CrossKey.module.css";
 import { stopEvent } from "../../controller";
-import { MAX_POWER, POWER_RATIO } from "../../App";
+import { MAX_POWER, POWER_RATIO } from "../../env";
 
 export const CrossKey = () => {
   const { controller, setController } = useController();

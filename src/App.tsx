@@ -6,13 +6,9 @@ import { LeftFiringButton } from "./components/LeftFiringButton";
 import { RightFiringButton } from "./components/RightFiringButton";
 import { LeftTurnButton } from "./components/LeftTurnButton";
 import { RightTurnButton } from "./components/RightTurnButton";
-import { useController } from "./components/ControllerProvider/ControllerProvider";
+import { useController } from "./hooks/useController";
 import styles from "./App.module.css";
-
-const URL = import.meta.env.VITE_URL;
-const INTERVAL_TIME = import.meta.env.VITE_INTERVAL_TIME;
-export const MAX_POWER = import.meta.env.VITE_MAX_POWER;
-export const POWER_RATIO = import.meta.env.VITE_POWER_RATIO;
+import { INTERVAL_TIME, URL } from "./env";
 
 const postObject = (url: string, body: object): Promise<Response> => {
   const json = JSON.stringify(body);

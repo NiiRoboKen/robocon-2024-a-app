@@ -1,5 +1,5 @@
 import { Button } from "../Button";
-import { useController } from "../ControllerProvider";
+import { useController } from "../../hooks/useController";
 import { TurnEvent, stopEvent } from "../../controller";
 import styles from "../MotionButton.module.css";
 

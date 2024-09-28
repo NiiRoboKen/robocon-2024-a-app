@@ -1,8 +1,8 @@
 import { Joystick } from "react-joystick-component";
 import { IJoystickUpdateEvent } from "react-joystick-component/build/lib/Joystick";
-import { useController } from "../ControllerProvider";
+import { useController } from "../../hooks/useController";
 import { stopEvent } from "../../controller";
-import { MAX_POWER } from "../../App";
+import { MAX_POWER } from "../../env";
 
 export const JoyStick = () => {
   const { controller, setController } = useController();

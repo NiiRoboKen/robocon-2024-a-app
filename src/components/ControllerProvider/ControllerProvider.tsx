@@ -1,22 +1,13 @@
 import {
   ReactNode,
-  SetStateAction,
-  createContext,
-  useContext,
   useState,
 } from "react";
 import { Controller } from "../../controller";
+import { ControllerContext } from "../../hooks/useController";
 
 export interface Props {
   children?: ReactNode;
 }
-
-export interface ContextType {
-  controller: Controller;
-  setController: React.Dispatch<SetStateAction<Controller>>;
-}
-
-const ControllerContext = createContext<ContextType | null>(null);
 
 export const ControllerProvider = ({ children }: Props) => {
   const [controller, setController] = useState(
@@ -27,16 +18,4 @@ export const ControllerProvider = ({ children }: Props) => {
       {children}
     </ControllerContext.Provider>
   );
-};
-
-export const useController = () => {
-  const context = useContext(ControllerContext);
-
-  if (context == null) {
-    throw new Error(
-      "ControllerContext must be used within a ControllerProvider.",
-    );
-  }
-
-  return context;
 };

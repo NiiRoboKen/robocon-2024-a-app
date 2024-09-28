@@ -1,7 +1,4 @@
-import {
-  ReactNode,
-  useState,
-} from "react";
+import { ReactNode, useState } from "react";
 import { Controller } from "../../controller";
 import { ControllerContext } from "../../hooks/useController";
 

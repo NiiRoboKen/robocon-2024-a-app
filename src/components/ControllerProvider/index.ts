@@ -1,3 +1,1 @@
-export {
-  ControllerProvider,
-} from "./ControllerProvider";
+export { ControllerProvider } from "./ControllerProvider";

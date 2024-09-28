@@ -47,7 +47,13 @@ const App = () => {
     <>
       <div className={styles.app}>
         <div className={styles.top}>
+         <div className={styles.top_center}>
+          <LeftFiringButton/>
+          <CollectButton/>
+          <RightFiringButton/>
         </div>
+        </div>
+     
         <div className={styles.bottom}>
           <div className={styles.bottoms}>
             <div className={styles.bottoms_top}>
@@ -62,6 +68,7 @@ const App = () => {
               <RightTurnButton />
             </div>
             <div className={styles.bottoms_bottom}>
+              <CrossKey/>
             </div>
           </div>
         </div>

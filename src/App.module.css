@@ -5,6 +5,15 @@
 .top {
   height: 30%;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top_center{
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .bottom {

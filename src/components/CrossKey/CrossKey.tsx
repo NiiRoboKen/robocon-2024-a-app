@@ -1,15 +1,15 @@
-import { Button } from "../Button";
 import { useController } from "../../hooks/useController";
 import style from "./CrossKey.module.css";
 import { stopEvent } from "../../controller";
 import { MAX_POWER, POWER_RATIO } from "../../env";
+import { CrossKeyButton } from "./CrossKeyButton";
 
 export const CrossKey = () => {
   const { controller, setController } = useController();
   return (
     <div className={style["cross-layout"]}>
       <div className={style["position-front"]}>
-        <Button
+        <CrossKeyButton
           onPress={() => {
             setController(
               controller.update_event({
@@ -22,16 +22,11 @@ export const CrossKey = () => {
             setController(controller.update_event(stopEvent));
           }}
         >
-          <p className={style["front-key"]}>▲</p>
-        </Button>
-      </div>
-      <div className={style["position-center"]}>
-        <Button>
-          <p className={style["center-key"]}>●</p>
-        </Button>
+          <p>上</p>
+        </CrossKeyButton>
       </div>
       <div className={style["position-left"]}>
-        <Button
+        <CrossKeyButton
           onPress={() => {
             setController(
               controller.update_event({
@@ -44,11 +39,11 @@ export const CrossKey = () => {
             setController(controller.update_event(stopEvent));
           }}
         >
-          <p className={style["left-key"]}>▲</p>
-        </Button>
+          <p>左</p>
+        </CrossKeyButton>
       </div>
       <div className={style["position-right"]}>
-        <Button
+        <CrossKeyButton
           onPress={() => {
             setController(
               controller.update_event({
@@ -61,11 +56,11 @@ export const CrossKey = () => {
             setController(controller.update_event(stopEvent));
           }}
         >
-          <p className={style["right-key"]}>▲</p>
-        </Button>
+          <p>右</p>
+        </CrossKeyButton>
       </div>
       <div className={style["position-back"]}>
-        <Button
+        <CrossKeyButton
           onPress={() => {
             setController(
               controller.update_event({
@@ -78,8 +73,8 @@ export const CrossKey = () => {
             setController(controller.update_event(stopEvent));
           }}
         >
-          <p className={style["back-key"]}>▼</p>
-        </Button>
+          <p>下</p>
+        </CrossKeyButton>
       </div>
     </div>
   );

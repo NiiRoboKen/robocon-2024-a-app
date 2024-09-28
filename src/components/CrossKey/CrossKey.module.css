@@ -1,8 +1,8 @@
+/*
 .cross-layout {
     display: grid;
-   place-content: center;
-    grid-template-columns: 90px 90px 90px;
-    grid-template-rows: 90px 90px 90px;
+    grid-template-columns:50rem,50rem,50rem;
+    grid-template-rows:50rem,50rem,50rem;
 }
 
 
@@ -35,56 +35,34 @@
 .front-key{
     display: grid;
     place-content: center;
-    size: 15px;
-    width: 25px;
-    height: 25px;
-    padding: 17.5px;
-    margin: 0;
-    font-size: 30px;
+   
 }
 
 .center-key{
     display: grid;
     place-content: center;
-    size: 15px;
-    width: 25px;
-    height: 25px;
-    padding: 17.5px;
-    margin: 0;
-    font-size: 30px;
+    
 }
 
 .left-key{
     display: grid;
     place-content: center;
-    size: 15px;
-    width: 25px;
-    height: 25px;
-    padding: 17.5px;
-    margin: 0;
-    font-size: 30px;
+    
     transform: rotate(-90deg);
 }
 
 .right-key{
     display: grid;
     place-content: center;
-    size: 15px;
-    width: 25px;
-    height: 25px;
-    padding: 17.5px;
-    margin: 0;
-    font-size: 30px;
+    
     transform: rotate(90deg);
 }
+*/
 
-.back-key{
-    display: grid;
-    place-content: center;
-    size: 15px;
-    width: 25px;
-    height: 25px;
-    padding: 17.5px;
-    margin: 0;
-    font-size: 30px;
+.key {
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    border: 0.15rem solid #bfbfbf
 }
+

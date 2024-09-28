@@ -1,5 +1,6 @@
 import { Button } from "../Button";
 import { useController } from "../ControllerProvider";
+import styles from "../MotionButton.module.css";
 
 export const RightFiringButton = () => {
   const { controller, setController } = useController();
@@ -10,7 +11,7 @@ export const RightFiringButton = () => {
           setController(controller.push_right_firing());
         }}
       >
-        <p>右発射</p>
+        <p className={styles.motion}>右発射</p>
       </Button>
     </div>
   );

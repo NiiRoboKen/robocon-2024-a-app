@@ -24,8 +24,8 @@ export const Button = ({
         onTouchEnd={onRelease}
         onMouseDown={onPress}
         onMouseUp={onRelease}
-        className={classes.button}
         disabled={disabled}
+        className={classes.button}
       >
         {children}
       </button>

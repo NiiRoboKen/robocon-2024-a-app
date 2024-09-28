@@ -1,5 +1,6 @@
 import { Button } from "../Button";
 import { useController } from "../ControllerProvider";
+import styles from "../MotionButton.module.css";
 
 export const CollectButton = () => {
   const { controller, setController } = useController();
@@ -10,7 +11,7 @@ export const CollectButton = () => {
           setController(controller.push_collect());
         }}
       >
-        <p>回収</p>
+        <p className={styles.motion}>回収</p>
       </Button>
     </div>
   );

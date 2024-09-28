@@ -6,8 +6,8 @@ import { LeftFiringButton } from "./components/LeftFiringButton";
 import { RightFiringButton } from "./components/RightFiringButton";
 import { LeftTurnButton } from "./components/LeftTurnButton";
 import { RightTurnButton } from "./components/RightTurnButton";
-import style from "./App.module.css";
 import { useController } from "./components/ControllerProvider/ControllerProvider";
+import styles from "./App.module.css";
 
 const URL = import.meta.env.VITE_URL;
 const INTERVAL_TIME = import.meta.env.VITE_INTERVAL_TIME;
@@ -46,32 +46,32 @@ const App = () => {
 
   return (
     <>
-      <div className={style.app}>
-        <div className={style.left}>
-          <div className={style.crosskey}>
-            <CrossKey />
-          </div>
-          <div className={style.joystick}>
+      <div className={styles.app}>
+        <div className={styles.crosskey}>
+          <CrossKey />
+        </div>
+        <div className={styles.joystick}>
+          <div className={styles.stylej}>
             <JoyStick />
           </div>
         </div>
-        <div className={style.button}>
-          <div className={style.collect}>
+        <div className={styles.button}>
+          <div className={styles.collect}>
             <CollectButton />
           </div>
-          <div className={style.firing}>
-            <div className={style.leftfiring}>
+          <div className={styles.firing}>
+            <div className={styles.leftfiring}>
               <LeftFiringButton />
             </div>
-            <div className={style.rightfiring}>
+            <div className={styles.rightfiring}>
               <RightFiringButton />
             </div>
           </div>
-          <div className={style.turn}>
-            <div className={style.leftturn}>
+          <div className={styles.turn}>
+            <div className={styles.leftturn}>
               <LeftTurnButton />
             </div>
-            <div className={style.rightturn}>
+            <div className={styles.rightturn}>
               <RightTurnButton />
             </div>
           </div>

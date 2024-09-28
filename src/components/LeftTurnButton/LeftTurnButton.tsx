@@ -1,6 +1,7 @@
 import { Button } from "../Button";
 import { useController } from "../ControllerProvider";
 import { TurnEvent, stopEvent } from "../../controller";
+import styles from "../MotionButton.module.css";
 
 export const LeftTurnButton = () => {
   const { controller, setController } = useController();
@@ -9,17 +10,15 @@ export const LeftTurnButton = () => {
     value: "left",
   };
   return (
-    <div>
-      <Button
-        onPress={() => {
-          setController(controller.update_event(turnEvent));
-        }}
-        onRelease={() => {
-          setController(controller.update_event(stopEvent));
-        }}
-      >
-        <p>左回り</p>
-      </Button>
-    </div>
+    <Button
+      onPress={() => {
+        setController(controller.update_event(turnEvent));
+      }}
+      onRelease={() => {
+        setController(controller.update_event(stopEvent));
+      }}
+    >
+      <p className={styles.motion}>左回り</p>
+    </Button>
   );
 };

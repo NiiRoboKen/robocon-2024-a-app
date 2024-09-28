@@ -9,6 +9,7 @@ import { RightTurnButton } from "./components/RightTurnButton";
 import { useController } from "./hooks/useController";
 import styles from "./App.module.css";
 import { INTERVAL_TIME, URL } from "./env";
+import { useWindowSize } from "./hooks/useWindowSize";
 
 const postObject = (url: string, body: object): Promise<Response> => {
   const json = JSON.stringify(body);
@@ -40,35 +41,27 @@ const App = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const [,height] = useWindowSize();
+
   return (
     <>
       <div className={styles.app}>
-        <div className={styles.crosskey}>
-          <CrossKey />
+        <div className={styles.top}>
         </div>
-        <div className={styles.joystick}>
-          <div className={styles.stylej}>
-            <JoyStick />
-          </div>
-        </div>
-        <div className={styles.button}>
-          <div className={styles.collect}>
-            <CollectButton />
-          </div>
-          <div className={styles.firing}>
-            <div className={styles.leftfiring}>
-              <LeftFiringButton />
-            </div>
-            <div className={styles.rightfiring}>
-              <RightFiringButton />
-            </div>
-          </div>
-          <div className={styles.turn}>
-            <div className={styles.leftturn}>
+        <div className={styles.bottom}>
+          <div className={styles.bottoms}>
+            <div className={styles.bottoms_top}>
               <LeftTurnButton />
             </div>
-            <div className={styles.rightturn}>
+            <div className={styles.bottoms_bottom}>
+              <JoyStick size={height / 3}/>
+            </div>
+          </div>
+          <div className={styles.bottoms}>
+            <div className={styles.bottoms_top}>
               <RightTurnButton />
+            </div>
+            <div className={styles.bottoms_bottom}>
             </div>
           </div>
         </div>

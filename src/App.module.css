@@ -1,3 +1,39 @@
+.app {
+  height: 100%;
+}
+
+.top {
+  height: 30%;
+  width: 100%;
+}
+
+.bottom {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.bottoms {
+  flex-basis: 30%;
+  display: block;
+}
+
+.bottoms_top {
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottoms_bottom {
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* .app { */
 /* background-color: #fff6d8; */
 /* height: 100%; */

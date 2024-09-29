@@ -1,11 +1,17 @@
 import { ReactNode } from "react";
 import classes from "./Button.module.css";
 
-type Theme = "default" | "normal-monster" | "pink-monster" | "redbull" | "chillout" | "cola";
+type Theme =
+  | "default"
+  | "normal-monster"
+  | "pink-monster"
+  | "redbull"
+  | "chillout"
+  | "cola";
 type ThemeStyle = {
-  color: string,
-  backgroundColor: string,
-  borderColor: string,
+  color: string;
+  backgroundColor: string;
+  borderColor: string;
 };
 
 type Props = {
@@ -26,19 +32,19 @@ const defaultStyle: ThemeStyle = {
 const normalMonster: ThemeStyle = {
   color: "#03CE00",
   backgroundColor: "#000000",
-  borderColor: "#BFBFBF"
+  borderColor: "#BFBFBF",
 };
 
 const pinkMonster: ThemeStyle = {
   color: "#FFFFFF",
   backgroundColor: "#FF6D7C",
-  borderColor: "#000000"
+  borderColor: "#000000",
 };
 
 const redBull: ThemeStyle = {
   color: "#EA4D3D",
   backgroundColor: "#000CEE",
-  borderColor: "#F6CE46"
+  borderColor: "#F6CE46",
 };
 
 const chillOut: ThemeStyle = {
@@ -56,23 +62,18 @@ const cola: ThemeStyle = {
 const selectStyle = (theme?: Theme) => {
   if (theme === "normal-monster") {
     return normalMonster;
-  }
-  else if (theme === "pink-monster") {
+  } else if (theme === "pink-monster") {
     return pinkMonster;
-  }
-  else if (theme === "redbull") {
+  } else if (theme === "redbull") {
     return redBull;
-  }
-  else if (theme === "chillout") {
+  } else if (theme === "chillout") {
     return chillOut;
-  }
-  else if (theme === "cola") {
+  } else if (theme === "cola") {
     return cola;
-  }
-  else {
+  } else {
     return defaultStyle;
   }
-}
+};
 
 export const Button = ({
   children,

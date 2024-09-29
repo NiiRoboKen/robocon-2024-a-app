@@ -23,7 +23,7 @@ export const CrossKey = () => {
             setController(controller.update_event(stopEvent));
           }}
         >
-          <p>上</p>
+          <p>▲</p>
         </CrossKeyButton>
       </div>
       <div className={style.left}>
@@ -41,7 +41,7 @@ export const CrossKey = () => {
             setController(controller.update_event(stopEvent));
           }}
         >
-          <p>左</p>
+          <p>◀</p>
         </CrossKeyButton>
       </div>
       <div className={style.right}>
@@ -59,7 +59,7 @@ export const CrossKey = () => {
             setController(controller.update_event(stopEvent));
           }}
         >
-          <p>右</p>
+          <p>▶</p>
         </CrossKeyButton>
       </div>
       <div className={style.down}>
@@ -77,7 +77,7 @@ export const CrossKey = () => {
             setController(controller.update_event(stopEvent));
           }}
         >
-          <p>下</p>
+          <p>▼</p>
         </CrossKeyButton>
       </div>
     </div>

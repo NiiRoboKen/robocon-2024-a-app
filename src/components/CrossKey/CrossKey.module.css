@@ -24,67 +24,6 @@
   grid-column: 2 / 3;
 }
 
-/*
-.cross-layout {
-    display: grid;
-    grid-template-columns:50rem,50rem,50rem;
-    grid-template-rows:50rem,50rem,50rem;
-}
-
-
-.position-front {
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
-}
-
-.position-center{
-    grid-row: 2 / 3;
-    grid-column: 2 / 3;
-}
-
-.position-left {
-    grid-row: 2 / 3;
-    grid-column: 1 / 2;
-}
-
-.position-right {
-    grid-row: 2 / 3;
-    grid-column: 3 / 4;
-}
-
-.position-back {
-    grid-row: 3 / 4;
-    grid-column: 2 / 3;
-}
-
-
-.front-key{
-    display: grid;
-    place-content: center;
-   
-}
-
-.center-key{
-    display: grid;
-    place-content: center;
-    
-}
-
-.left-key{
-    display: grid;
-    place-content: center;
-    
-    transform: rotate(-90deg);
-}
-
-.right-key{
-    display: grid;
-    place-content: center;
-    
-    transform: rotate(90deg);
-}
-*/
-
 .key {
   color: #FFFFFF;
   height: 3.8rem;

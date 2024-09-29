@@ -10,7 +10,7 @@
   align-items: center;
 }
 
-.top_center{
+.top_center {
   width: 50%;
   display: flex;
   justify-content: space-around;
@@ -30,14 +30,14 @@
 }
 
 .bottoms_top {
-  height: 40%;
+  height: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .bottoms_bottom {
-  height: 60%;
+  height: 70%;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -7,9 +7,10 @@ import { CrossKeyButton } from "./CrossKeyButton";
 export const CrossKey = () => {
   const { controller, setController } = useController();
   return (
-    <div className={style["cross-layout"]}>
-      <div className={style["position-front"]}>
+    <div className={style.cross_layout}>
+      <div className={style.up}>
         <CrossKeyButton
+          color="blue"
           onPress={() => {
             setController(
               controller.update_event({
@@ -25,8 +26,9 @@ export const CrossKey = () => {
           <p>上</p>
         </CrossKeyButton>
       </div>
-      <div className={style["position-left"]}>
+      <div className={style.left}>
         <CrossKeyButton
+          color="red"
           onPress={() => {
             setController(
               controller.update_event({
@@ -42,8 +44,9 @@ export const CrossKey = () => {
           <p>左</p>
         </CrossKeyButton>
       </div>
-      <div className={style["position-right"]}>
+      <div className={style.right}>
         <CrossKeyButton
+          color="green"
           onPress={() => {
             setController(
               controller.update_event({
@@ -59,8 +62,9 @@ export const CrossKey = () => {
           <p>右</p>
         </CrossKeyButton>
       </div>
-      <div className={style["position-back"]}>
+      <div className={style.down}>
         <CrossKeyButton
+          color="yellow"
           onPress={() => {
             setController(
               controller.update_event({

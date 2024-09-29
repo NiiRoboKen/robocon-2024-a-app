@@ -42,7 +42,7 @@ const pinkMonster: ThemeStyle = {
 };
 
 const redBull: ThemeStyle = {
-  color: "#EA4D3D",
+  color: "#FF1B3D",
   backgroundColor: "#000CEE",
   borderColor: "#F6CE46",
 };

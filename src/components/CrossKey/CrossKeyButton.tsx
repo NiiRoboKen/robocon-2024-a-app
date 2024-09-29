@@ -1,38 +1,38 @@
 import { ReactNode } from "react";
-import classes from "./CrossKey.module.css"
+import classes from "./CrossKey.module.css";
 
-type Color = "up"|"down"|"left"|"right";
+type Color = "red" | "blue" | "green" | "yellow";
 
-const colorStyles ={
-     up:{backgroundColor:"#FFFFFF"},
-     down:{backgroundColor:"#FFFFFF"},
-     left:{backgroundColor:"#FFFFFF"},
-     right:{backgroundColor:"#FFFFFF"},
-    };
+const colorStyles = {
+  red: { backgroundColor: "#FF4015" },
+  blue: { backgroundColor: "#3A87FE" },
+  green: { backgroundColor: "#64C466" },
+  yellow: { backgroundColor: "#F6CE46" },
+};
 
-type Props={
-    children? :ReactNode;
-    onPress ?:()=>void ;
-    onRelease ?:()=> void ;
-    color?:Color;
+type Props = {
+  children?: ReactNode;
+  onPress?: () => void;
+  onRelease?: () => void;
+  color: Color;
 };
 
 export const CrossKeyButton = ({
-    children ,
-    onPress,
-    onRelease,
-    color
-}:Props)=>{
-    return(
-        <button
-        onTouchStart={onPress}
-        onTouchEnd={onRelease}
-        onMouseDown={onPress}
-        onMouseUp={onRelease}
-        className={classes.key}
-        style={color?colorStyles[color]:{}}
-        >
-            {children}
-        </button>
-    )
-}
+  children,
+  onPress,
+  onRelease,
+  color,
+}: Props) => {
+  return (
+    <button
+      onTouchStart={onPress}
+      onTouchEnd={onRelease}
+      onMouseDown={onPress}
+      onMouseUp={onRelease}
+      className={classes.key}
+      style={color ? colorStyles[color] : {}}
+    >
+      {children}
+    </button>
+  );
+};

@@ -41,26 +41,26 @@ const App = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const [,height] = useWindowSize();
+  const [, height] = useWindowSize();
 
   return (
     <>
       <div className={styles.app}>
         <div className={styles.top}>
-         <div className={styles.top_center}>
-          <LeftFiringButton/>
-          <CollectButton/>
-          <RightFiringButton/>
+          <div className={styles.top_center}>
+            <LeftFiringButton />
+            <CollectButton />
+            <RightFiringButton />
+          </div>
         </div>
-        </div>
-     
+
         <div className={styles.bottom}>
           <div className={styles.bottoms}>
             <div className={styles.bottoms_top}>
               <LeftTurnButton />
             </div>
             <div className={styles.bottoms_bottom}>
-              <JoyStick size={height / 3}/>
+              <JoyStick size={height / 3} />
             </div>
           </div>
           <div className={styles.bottoms}>
@@ -68,7 +68,7 @@ const App = () => {
               <RightTurnButton />
             </div>
             <div className={styles.bottoms_bottom}>
-              <CrossKey/>
+              <CrossKey />
             </div>
           </div>
         </div>
